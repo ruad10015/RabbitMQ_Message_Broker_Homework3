@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "RabbitMQ Consumer";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4>RabbitMQ Consumer</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="text-center">Received Messages</h5>
+                    @if (Model != null)
+                    {
+                        <ul class="list-group">
+                            @foreach (var message in Model)
+                            {
+                                <li class="list-group-item">@message</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p class="text-center text-muted">No messages received yet.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
